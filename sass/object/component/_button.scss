@@ -1,0 +1,113 @@
+// ==========================================================================
+// Component | button 
+// ==========================================================================
+
+/*doc
+---
+title: Button
+name: Button
+category: component-button
+---
+
+ボタンオブジェクトです。  
+`div`、`a`、`button`、`submit`に使うことを想定しています。
+
+```html_example
+<div class="c-button c-button--yellow">[div] yellow</div>
+<a href="#" class="c-button c-button--yellow">[a] yellow</a>
+<button class="c-button c-button--yellow">[button] yellow</button>
+<submit class="c-button c-button--yellow">[submit] yellow</submit>
+```
+
+```html_example
+<div class="c-button c-button--red">[div] red</div>
+<a href="#" class="c-button c-button--red">[a] red</a>
+<button class="c-button c-button--red">[button] red</button>
+<submit class="c-button c-button--red">[submit] red</submit>
+```
+
+```html_example
+<div class="c-button c-button--green">[div] green</div>
+<a href="#" class="c-button c-button--green">[a] green</a>
+<button class="c-button c-button--green">[button] green</button>
+<submit class="c-button c-button--green">[submit] green</submit>
+```
+
+```html_example
+<div class="c-button c-button--disable">[div] disable</div>
+<a href="#" class="c-button c-button--disable">[a] disable</a>
+<button class="c-button c-button--disable">[button] disable</button>
+<submit class="c-button c-button--disable">[submit] disable</submit>
+```
+*/
+
+$my-button-padding: rem(16px) !default;
+$my-button-color-green: my-color('core', 'green') !default;
+$my-button-color-yellow: my-color('core', 'yellow') !default;
+$my-button-color-red: my-color('core', 'red') !default;
+$my-button-color-gray: my-color('core', 'gray') !default;
+
+// buttonやsubmitに使われることを想定して、input系のスタイルをリセットします
+.c-button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: $my-button-padding;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-radius: $my-base-radius;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color ease-out $my-base-transition-duration;
+  appearance: none;
+}
+
+.c-button--full {
+  width: 100%;
+}
+
+.c-button--green,
+.c-button--yellow,
+.c-button--red {
+  color: #fff;
+}
+
+.c-button--green {
+  border-color: $my-button-color-green;
+  background-color: $my-button-color-green;
+
+  &:hover {
+    background-color: darken($my-button-color-green, 8%);
+  }
+}
+
+.c-button--yellow {
+  border-color: $my-button-color-yellow;
+  background-color: $my-button-color-yellow;
+
+  &:hover {
+    background-color: darken($my-button-color-yellow, 8%);
+  }
+}
+
+.c-button--red {
+  border-color: $my-button-color-red;
+  background-color: $my-button-color-red;
+
+  &:hover {
+    background-color: darken($my-button-color-red, 8%);
+  }
+}
+
+.c-button--disable {
+  border-color: #eee;
+  background-color: $my-button-color-gray;
+  color: #ccc;
+  cursor: default;
+  pointer-events: none;
+}

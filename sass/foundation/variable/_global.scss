@@ -1,0 +1,67 @@
+// ==========================================================================
+// Foundation | variable | global
+// ==========================================================================
+
+// デザインガイド的なグローバル変数です
+// --------------------------------------------------------------------------
+$my-text-size: 16px !default;
+$my-base-margin: 16px !default;
+$my-base-radius: 3px !default;
+$my-base-transition-duration: 0.25s !default;
+
+// z-indexを管理します
+$my-z-indexs: (
+  'default': 1,
+  'oneup': 2,
+  'max': 3
+) !default;
+
+// marginを管理します
+$my-margins: (
+  'xs': rem($my-base-margin / 2),
+  's': rem($my-base-margin),
+  'm': rem($my-base-margin * 2),
+  'l': rem($my-base-margin * 4)
+) !default;
+
+// カラースキームを管理します
+$my-colors: (
+  'text': (
+    'base': #555,
+    'dark': #000,
+    'light': #eee
+  ),
+  'link': (
+    'base': #000,
+    'visit': darken(#000, 10%),
+    'hover': lighten(#000, 5%)
+  ),
+  'success': (
+    'text': #3c763d,
+    'border': #d6e9c6,
+    'bg': #dff0d8
+  ),
+  'warning': (
+    'text': #8a6d3b,
+    'border': #faebcc,
+    'bg': #fcf8e3
+  ),
+  'danger': (
+    'text': #a94442,
+    'border': #ebccd1,
+    'bg': #f2dede
+  ),
+  'core': (
+    'green': #5cb85c,
+    'yellow': #f0ad4e,
+    'red': #d9534f,
+    'gray': #f9f9f9
+  )
+) !default;
+
+// ブレイクポイントを管理します
+$my-break-points: (
+  's': 'screen and (max-width: 399px)',
+  'm': 'screen and (max-width: 767px)',
+  'l': 'screen and (max-width: 1000px)'
+) !default;

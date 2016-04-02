@@ -1,0 +1,13 @@
+// ==========================================================================
+// Utility | align
+// ==========================================================================
+//
+// vertical-alignを指定するヘルパークラスです。
+// --------------------------------------------------------------------------
+// va-t ... vertical-align-top
+// va-m ... vertical-alig-middle
+// va-b ... vertical-align-bottom
+
+.u-va-t { vertical-align: top !important }
+.u-va-m { vertical-align: middle !important; }
+.u-va-b { vertical-align: bottom !important; }

@@ -1,0 +1,6 @@
+.DS_Store
+/bin
+/.bundle
+/vendor/bundle
+/.sass-cache
+style-guide.psd

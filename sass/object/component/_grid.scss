@@ -1,0 +1,242 @@
+// ==========================================================================
+// Component | grid
+// ==========================================================================
+
+/*doc
+---
+title: Grid
+name: Grid
+category: component-grid
+---
+
+シンプルなグリッドオブジェクトです。  
+`width`は`u-col-*of*`のヘルパーを使って指定します。  
+デフォルトではガターはありません。
+
+```html_example
+<div class="c-grid">
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+カラム間にガターがほしい場合は、`modifier`で設定します。  
+`small`以外には、`medium`と`large`を指定することができます。
+
+```html_example
+<div class="c-grid c-grid--gap-small">
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+ネストも出来ます。
+
+```html_example
+<div class="c-grid c-grid--gap-small">
+  <div class="c-grid__item u-col-6of12">
+    <div class="c-grid">
+      <div class="c-grid__item u-col-6of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-6of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grid__item u-col-6of12">
+    <div class="c-grid">
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+位置を調整することもできます。
+
+```html_example
+<div class="c-grid">
+  <div class="c-grid__item u-col-6of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+右寄せ。
+
+```html_example
+<div class="c-grid c-grid--right">
+  <div class="c-grid__item u-col-6of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+水平方向中央。
+
+```html_example
+<div class="c-grid c-grid--center">
+  <div class="c-grid__item u-col-6of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+均等割り付け。
+
+```html_example
+<div class="c-grid c-grid--justify">
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+htmlの記述とは逆にすることが出来ます。  
+これは、サイドバー・メインの並びをブラウザ上では逆にしたい場合に使います。
+
+```html_example
+<div class="c-grid c-grid--rev c-grid--gap-large">
+  <div class="c-grid__item u-col-9of12">
+    <div class="p-example-box">メイン</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">サイドバー</div>
+  </div>
+</div>
+```
+*/
+
+$my-grid-gap-small: rem(8px) !default;
+$my-grid-gap-medium: rem(16px) !default;
+$my-grid-gap-large: rem(40px) !default;
+
+.c-grid {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.c-grid__item {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.c-grid--gap-small {
+  margin-left: -$my-grid-gap-small;
+
+  > .c-grid__item {
+    padding-left: $my-grid-gap-small;
+  }
+}
+
+.c-grid--gap-medium {
+  margin-left: -$my-grid-gap-medium;
+
+  > .c-grid__item {
+    padding-left: $my-grid-gap-medium;
+  }
+}
+
+.c-grid--gap-large {
+  margin-left: -$my-grid-gap-large;
+
+  > .c-grid__item {
+    padding-left: $my-grid-gap-large;
+  }
+}
+
+.c-grid--center {
+  text-align: center;
+
+  > .c-grid__item {
+    text-align: left;
+  }
+}
+
+.c-grid--right {
+  text-align: right;
+
+  > .c-grid__item {
+    text-align: left;
+  }
+}
+
+.c-grid--justify {
+  text-align: justify;
+  text-justify: distribute-all-lines;
+
+  &:after {
+    display: inline-block;
+    width: 100%;
+    content: '';
+  }
+
+  > .c-grid__item {
+    text-align: left;
+  }
+}
+
+.c-grid--rev {
+  text-align: left;
+  direction: rtl;
+
+  > .c-grid__item {
+    text-align: left;
+    direction: ltr;
+  }
+}

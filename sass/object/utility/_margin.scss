@@ -1,0 +1,17 @@
+// ==========================================================================
+// Utility | align
+// ==========================================================================
+
+// marginを指定するヘルパーです
+// --------------------------------------------------------------------------
+// xs ... x-small
+// s  ... small
+// m  ... medium
+// l  ... large 
+// mt ... margin-top
+// mb ... margin-bottom
+
+@each $size, $size-value in $my-margins {
+  .u-mt-#{$size} { margin-top: $size-value !important; }
+  .u-mb-#{$size} { margin-bottom: $size-value !important; }
+}

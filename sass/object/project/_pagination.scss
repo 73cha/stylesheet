@@ -1,0 +1,135 @@
+// ==========================================================================
+// Project | pager
+// ==========================================================================
+
+/*doc
+---
+title: Pagination
+name: Pagination
+category: project-pagination
+---
+
+ページネーションブジェクトです。  
+暫定的な見た目です。各プロジェクトごとに見た目は調整します。  
+
+```html_example
+<ol class="p-pagination">
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&laquo;</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">1</a>
+  </li>
+  
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">2</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">3</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&raquo;</a>
+  </li>
+</ol>
+```
+
+リンクのカレントは`modifire`を使います。
+
+```html_example
+<ol class="p-pagination">
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&laquo;</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link is-current">1</a>
+  </li>
+  
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">2</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">3</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&raquo;</a>
+  </li>
+</ol>
+```
+
+中央寄せにしたいときは、`modifire`を使います。
+
+```html_example
+<ol class="p-pagination p-pagination--center">
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&laquo;</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">1</a>
+  </li>
+  
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">2</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">3</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&raquo;</a>
+  </li>
+</ol>
+```
+*/
+
+$my-pagination-padding-y: rem(8px) !default;
+$my-pagination-padding-x: rem(16px) !default;
+
+.p-pagination {
+  font-size: 0;
+  line-height: 1;
+}
+
+.p-pagination--center {
+  text-align: center;
+}
+
+.p-pagination__item {
+  display: inline-block;
+  list-style-type: none;
+  border: solid 1px #eee;
+  font-size: 1rem;
+  overflow: hidden;
+
+  &:first-child {
+    border-top-left-radius: rem(16px);
+    border-bottom-left-radius: rem(16px);
+  }
+
+  &:last-child {
+    border-top-right-radius: rem(16px);
+    border-bottom-right-radius: rem(16px);
+  }
+}
+
+.p-pagination__item + .p-pagination__item {
+  border-left: none;
+}
+
+.p-pagination__link {
+  display: block;
+  padding: $my-pagination-padding-y $my-pagination-padding-x;
+  text-decoration: none;
+
+  &:hover,
+  &.is-current {
+    background-color: #f9f9f9;
+  }
+}

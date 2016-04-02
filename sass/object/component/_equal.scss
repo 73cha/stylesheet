@@ -1,0 +1,49 @@
+// ==========================================================================
+// Component | equal 
+// ==========================================================================
+
+/*doc
+---
+title: Equal
+name: Equal
+category: component-equal
+---
+
+子要素の幅を均等にして横並びにするオブジェクトです。
+
+```html_example
+<div class="c-equal">
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+*/
+
+.c-equal {
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+}
+
+.c-equal__item {
+  display: table-cell;
+}

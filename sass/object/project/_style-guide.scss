@@ -1,0 +1,168 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #666;
+  font-family: 'Source Sans Pro';
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #00b7ee;
+  text-decoration: none;
+}
+
+h1 {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: solid 1px #eee;
+  font-size: 3em;
+  line-height: 1;
+}
+
+pre,
+code {
+  font-family: 'Source Code Pro';
+}
+
+code {
+  padding-right: rem(8px);
+  padding-left: rem(8px);
+  border: solid 1px #eee;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+}
+
+
+#l-styleGuide-header {
+  margin-bottom: rem(88px);
+  padding-top: rem(48px);
+  padding-bottom: 3em;
+  background-color: #00b7ee;
+}
+
+#l-styleGuide-main {
+  p {
+    margin-top: rem(24px);
+    margin-bottom: rem(24px);
+  }
+}
+
+#l-styleGuide-sidebar {
+}
+
+#l-styleGuide-footer {
+  margin-top: rem(80px);
+  padding-top: rem(80px);
+  padding-bottom: rem(80px);
+  border-top: solid 1px #eee;
+  text-align: center;
+}
+
+.p-styleGuide {
+}
+
+.p-styleGuide__name {
+  margin-right: rem(8px);
+  color: #fff;
+  font-weight: bold;
+  font-size: rem(32px);
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.p-styleGuide__version {
+  background-color: #fff;
+  color: #00b7ee;
+}
+
+.p-styleGuide__nav {
+  border: solid 1px #eee;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.p-styleGuide__navTitle {
+  padding-top: rem(24px);
+  padding-bottom: rem(24px);
+  border-bottom: solid 1px #eee;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.p-styleGuide__navItem {
+  position: relative;
+}
+.p-styleGuide__navItem + .p-styleGuide__navItem {
+  border-top: solid 1px #eee;
+}
+
+.p-styleGuide__navLink {
+  display: block;
+  padding: 1rem;
+
+  &:hover {
+    background-color: #fafcfd;
+  }
+
+  &:hover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    border-left: solid 3px #00b7ee;
+    content: '';
+  }
+}
+
+.p-styleGuide__example {
+  border: solid 1px #eee;
+  border-radius: 3px;
+}
+
+.p-styleGuide__example + .p-styleGuide__example {
+  margin-top: rem(24px);
+}
+
+.p-styleGuide__exampleOutput {
+  padding: rem(24px);
+}
+
+.p-styleGuide__codeBlock {
+  padding: rem(24px);
+  border-top: solid 1px #eee;
+  background-color: #fafcfd;
+}
+
+.p-example-box {
+  border: solid 1px #99d6e9;
+  background-color: #d3f1fa;
+}
+
+
+// ナビゲーションのカレント
+.Button [href$='component-button.html'],
+.Central [href$='component-central.html'],
+.Equal [href$='component-equal.html'],
+.Grid [href$='component-grid.html'],
+.Alert [href$='project-alert.html'],
+.Badge [href$='project-badge.html'],
+.Pagination [href$='project-pagination.html'],
+.Col [href$='utility-col.html'] {
+  background-color: #fafcfd;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: solid 3px #00b7ee;
+    content: '';
+  }
+}

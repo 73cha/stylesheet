@@ -1,0 +1,14 @@
+// ==========================================================================
+// Foundation | mixin | my-media-query
+// ==========================================================================
+
+// メディアクエリのmixinです
+@mixin my-media-query($break-point) {
+  @if map-has-key($my-break-points, $break-point) {
+    @media #{my-break-point($break-point)} {
+      @content;
+    }
+  } @else {
+    @warn "#{$break-point} is not difend.";
+  }
+}

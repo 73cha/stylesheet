@@ -1,0 +1,70 @@
+// ==========================================================================
+// Component | alert
+// ==========================================================================
+
+/*doc
+---
+title: Alert
+name: Alert
+category: project-alert
+---
+
+注意喚起を促すオブジェクトです。bootstrapのアラートと同様のオブジェクトです。
+
+```html_example
+<div class="p-alert p-alert--success">success</div>
+```
+
+```html_example
+<div class="p-alert p-alert--warning">warnig</div>
+```
+
+```html_example
+<div class="p-alert p-alert--danger">danger</div>
+```
+
+角丸にしたい場合は、`modifire`を使います。
+
+```html_example
+<div class="p-alert p-alert--round p-alert--success">success round</div>
+```
+
+```html_example
+<div class="p-alert p-alert--round p-alert--warning">warnig round</div>
+```
+
+```html_example
+<div class="p-alert p-alert--round p-alert--danger">danger round</div>
+```
+*/
+
+$my-alert-padding: rem(16px) !default;
+
+.p-alert {
+  box-sizing: border-box;
+  padding: $my-alert-padding;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.p-alert--round {
+  border-radius: $my-base-radius;
+}
+
+.p-alert--success {
+  border-color: my-color('success', 'border');
+  background-color: my-color('success', 'bg');
+  color: my-color('success', 'text');
+}
+
+.p-alert--warning {
+  border-color: my-color('warning', 'border');
+  background-color: my-color('warning', 'bg');
+  color: my-color('warning', 'text');
+}
+
+.p-alert--danger {
+  border-color: my-color('danger', 'border');
+  background-color: my-color('danger', 'bg');
+  color: my-color('danger', 'text');
+}

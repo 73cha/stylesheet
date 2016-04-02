@@ -1,0 +1,37 @@
+// ==========================================================================
+// Component | wrapper
+// ==========================================================================
+
+// 幅を持ち水平方向を中央寄せにするオブジェクトです。
+// 主にコンテンツをラップし、中央寄せにするために使います。
+// デフォルトのサイズ名はsmall, medium, largeです。
+
+// ```html
+// <div class="c-wrapper c-wrapper--[small, medium, large]>
+//   <div>
+//     <h1>hoge</h1>
+//     <p>hobe piyo foo bar</p>
+//   </div>
+// </div>
+// ```
+
+$my-wrapper-small: rem(960px) !default;
+$my-wrapper-medium: rem(1080px) !default;
+$my-wrapper-large: rem(1280px) !default;
+
+.c-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c-wrapper--small {
+  max-width: $my-wrapper-small;
+}
+
+.c-wrapper--medium {
+  max-width: $my-wrapper-medium;
+}
+
+.c-wrapper--large {
+  max-width: $my-wrapper-large;
+}

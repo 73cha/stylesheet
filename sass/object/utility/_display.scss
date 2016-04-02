@@ -1,0 +1,18 @@
+// ==========================================================================
+// Utility | display
+// ==========================================================================
+//
+// displayを指定するヘルパークラスです
+// --------------------------------------------------------------------------
+// d  ... display
+// b  ... block
+// ib ... inline-block 
+// tb ... table
+// tc ... table-cell
+// fl ... flex
+
+.u-d-b { display: block; }
+.u-d-ib { display: inline-block; }
+.u-d-tb { display: table; }
+.u-d-tc { display: table-cell; }
+.u-d-fl { display: flex; }

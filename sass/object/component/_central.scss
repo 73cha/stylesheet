@@ -1,0 +1,45 @@
+// ==========================================================================
+// Component | central
+// ==========================================================================
+
+/*doc
+---
+title: Central
+name: Central
+category: component-central
+---
+
+天地左右中央に配置したい場合に使います。  
+`c-central`に`height`を指定してください。  
+`style`属性かプロジェクトレイヤーから`height`を指定します。  
+高さを指定するための`modifire`はありません。
+
+```html_example
+<div class="c-central" style="height: 240px;">
+  <div class="c-central__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+*/
+
+.c-central {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  // https://github.com/VodkaBears/Remodal/blob/master/src/remodal.css#L51
+  &:after {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+  }
+}
+
+.c-central__item {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}

@@ -1,0 +1,21 @@
+        </main>
+
+        <aside class="c-grid__item u-col-3of12" id="l-styleGuide-sidebar">
+          <nav class="p-styleGuide__nav">
+            <h2 class="p-styleGuide__navTitle">TABLE OF CONTENTS</h2>
+            <ul>
+              <!-- component, project, utilityの順番にしたいのでソートする -->
+              <% Hash[@categories.sort].each do |category, file_name| %>
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="<%= file_name %>"><%= category %></a></li>
+              <% end %>
+            </ul>
+          </nav>
+        </aside>
+      </div><!-- /.c-grid -->
+    </div><!-- /.c-wrapper -->
+
+    <footer id="l-styleGuide-footer">
+      Generate by <a href="https://trulia.github.io/hologram/">Hologram</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>a brand new styleguide: component-grid</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet'>
+    <link rel="stylesheet" href="./build/css/github.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body class="p-styleGuide Grid">
+    <header id="l-styleGuide-header">
+      <div class="c-wrapper c-wrapper--large">
+        <span class="p-styleGuide__name">STYLE GUIDE</span>
+        <span class="p-styleGuide__version p-badge">0.0.1</span>
+      </div>
+    </header>
+
+    <!-- <pre>Grid</pre> -->
+
+    <div class="c-wrapper c-wrapper--large">
+      <div class="c-grid c-grid--rev c-grid--gap-large">
+        <main class="c-grid__item u-col-9of12" id="l-styleGuide-main">
+<h1 id="Grid" class="styleguide">Grid</h1>
+<p class="styleguide">シンプルなグリッドオブジェクトです。<br>
+<code class="styleguide">width</code>は<code class="styleguide">u-col-*of*</code>のヘルパーを使って指定します。<br>
+デフォルトではガターはありません。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <div class="c-grid">
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">カラム間にガターがほしい場合は、<code class="styleguide">modifier</code>で設定します。<br>
+<code class="styleguide">small</code>以外には、<code class="styleguide">medium</code>と<code class="styleguide">large</code>を指定することができます。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <div class="c-grid c-grid--gap-small">
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid c-grid--gap-small"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">ネストも出来ます。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <div class="c-grid c-grid--gap-small">
+  <div class="c-grid__item u-col-6of12">
+    <div class="c-grid">
+      <div class="c-grid__item u-col-6of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-6of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grid__item u-col-6of12">
+    <div class="c-grid">
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid c-grid--gap-small"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-6of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-6of12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-6of12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-6of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">位置を調整することもできます。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <div class="c-grid">
+  <div class="c-grid__item u-col-6of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-6of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">右寄せ。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <div class="c-grid c-grid--right">
+  <div class="c-grid__item u-col-6of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid c-grid--right"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-6of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">水平方向中央。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <div class="c-grid c-grid--center">
+  <div class="c-grid__item u-col-6of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid c-grid--center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-6of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">均等割り付け。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <div class="c-grid c-grid--justify">
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid c-grid--justify"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">htmlの記述とは逆にすることが出来ます。<br>
+これは、サイドバー・メインの並びをブラウザ上では逆にしたい場合に使います。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <div class="c-grid c-grid--rev c-grid--gap-large">
+  <div class="c-grid__item u-col-9of12">
+    <div class="p-example-box">メイン</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">サイドバー</div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid c-grid--rev c-grid--gap-large"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-9of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>メイン<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-grid__item u-col-3of12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>サイドバー<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </main>
+
+        <aside class="c-grid__item u-col-3of12" id="l-styleGuide-sidebar">
+          <nav class="p-styleGuide__nav">
+            <h2 class="p-styleGuide__navTitle">TABLE OF CONTENTS</h2>
+            <ul>
+              <!-- component, project, utilityの順番にしたいのでソートする -->
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="component-button.html">component-button</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="component-central.html">component-central</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="component-equal.html">component-equal</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="component-grid.html">component-grid</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="project-alert.html">project-alert</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="project-badge.html">project-badge</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="project-pagination.html">project-pagination</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="utility-col.html">utility-col</a></li>
+              
+            </ul>
+          </nav>
+        </aside>
+      </div><!-- /.c-grid -->
+    </div><!-- /.c-wrapper -->
+
+    <footer id="l-styleGuide-footer">
+      Generate by <a href="https://trulia.github.io/hologram/">Hologram</a>
+    </footer>
+  </body>
+</html>

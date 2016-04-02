@@ -1,0 +1,82 @@
+// ==========================================================================
+// Profject | badge 
+// ==========================================================================
+
+/*doc
+---
+title: Badge
+name: Badge
+category: project-badge
+---
+
+badgeオブジェクトです。  
+`div`や`span`に使うことを想定しています。  
+記事の投稿数を示すような時やNEWアイコンなどに使います。  
+デフォルトでは、ガターの設定はありません。
+
+```html_example
+<div>hoge<span class="p-badge p-badge--green">10</span></div>
+```
+
+ガターを儲けたい場合、`modifire`を使います。
+
+```html_example
+<div>hoge<span class="p-badge p-badge--red p-badge--gap">NEW</span></div>
+```
+
+カラーバリエーションは、緑、黄色、グレー、赤です。
+
+```html_example
+<div class="p-badge p-badge--green">green</div>
+<div class="p-badge p-badge--yellow p-badge--gap">yellow</div>
+<div class="p-badge p-badge--gray p-badge--gap">gray</div>
+<div class="p-badge p-badge--red p-badge--gap">red</div>
+```
+*/
+
+$my-badge-padding-x: rem(8px) !default;
+$my-badge-font-size: rem(14px) !default;
+$my-badge-color-green: my-color('core', 'green') !default;
+$my-badge-color-yellow: my-color('core', 'yellow') !default;
+$my-badge-color-red: my-color('core', 'red') !default;
+$my-badge-color-gray: my-color('core', 'gray') !default;
+
+.p-badge {
+  display: inline-block;
+  min-width: 1.618rem;
+  padding-right: $my-badge-padding-x;
+  padding-left: $my-badge-padding-x;
+  border-radius: rem(16px);
+  font-weight: normal;
+  font-size: $my-badge-font-size;
+  line-height: 1.6 !important;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.p-badge--green,
+.p-badge--yellow,
+.p-badge--red {
+  color: #fff;
+}
+
+.p-badge--gap {
+  margin-left: rem(8px);
+}
+
+.p-badge--green {
+  background-color: $my-badge-color-green;
+}
+
+.p-badge--yellow {
+  background-color: $my-badge-color-yellow;
+}
+
+.p-badge--red {
+  background-color: $my-badge-color-red;
+}
+
+.p-badge--gray {
+  background-color: $my-badge-color-gray;
+  color: #ccc;
+}

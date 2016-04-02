@@ -1,0 +1,47 @@
+// ==========================================================================
+// Foundation | function
+// ==========================================================================
+
+// z-indexnの値を取得します
+@function my-z-index($keyword) {
+  @return map-get($my-z-indexes, $keyword);
+}
+
+// カラースキームを取得します
+@function my-color($keyword, $type) {
+  @return map-get(map-get($my-colors, $keyword), $type);
+}
+
+// marginを取得します
+@function my-margin($keyword) {
+  @return map-get($my-margins, $keyword);
+}
+
+// ブレークポイントを取得します
+@function my-break-point($keyword) {
+  @return map-get($my-break-points, $keyword);
+}
+
+// 数値から単位を取り除きます
+@function strip-unit($val) {
+  @if (unitless($val)) { @return $val }
+  @return ($val / ($val * 0 + 1));
+}
+
+// 引数のpx値をベースのフォントサイズで除算してフォントサイズの倍率を取得します
+@function font-scale($pxval, $base: $my-text-size) {
+  $pxval: strip-unit($pxval);
+  $base: strip-unit($base);
+
+  @return ($pxval / $base);
+}
+
+// 引数のpx値をemに変換します
+@function em($pxval) {
+  @return font-scale($pxval) * 1em;
+}
+
+// 引数のpx値をremに変換します
+@function rem($pxval) {
+  @return font-scale($pxval) * 1rem;
+}

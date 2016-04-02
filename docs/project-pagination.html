@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>a brand new styleguide: project-pagination</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet'>
+    <link rel="stylesheet" href="./build/css/github.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body class="p-styleGuide Pagination">
+    <header id="l-styleGuide-header">
+      <div class="c-wrapper c-wrapper--large">
+        <span class="p-styleGuide__name">STYLE GUIDE</span>
+        <span class="p-styleGuide__version p-badge">0.0.1</span>
+      </div>
+    </header>
+
+    <!-- <pre>Pagination</pre> -->
+
+    <div class="c-wrapper c-wrapper--large">
+      <div class="c-grid c-grid--rev c-grid--gap-large">
+        <main class="c-grid__item u-col-9of12" id="l-styleGuide-main">
+<h1 id="Pagination" class="styleguide">Pagination</h1>
+<p class="styleguide">ページネーションブジェクトです。<br>
+暫定的な見た目です。各プロジェクトごとに見た目は調整します。  </p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <ol class="p-pagination">
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&laquo;</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">1</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">2</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">3</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&raquo;</a>
+  </li>
+</ol>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"p-pagination"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span><span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span><span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">リンクのカレントは<code class="styleguide">modifire</code>を使います。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <ol class="p-pagination">
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&laquo;</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link is-current">1</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">2</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">3</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&raquo;</a>
+  </li>
+</ol>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"p-pagination"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span><span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link is-current"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span><span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">中央寄せにしたいときは、<code class="styleguide">modifire</code>を使います。</p><div class="p-styleGuide__example">
+  <div class="p-styleGuide__exampleOutput">
+    <ol class="p-pagination p-pagination--center">
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&laquo;</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">1</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">2</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">3</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&raquo;</a>
+  </li>
+</ol>
+
+  </div>
+
+  <div class="p-styleGuide__codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"p-pagination p-pagination--center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span><span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-pagination__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"p-pagination__link"</span><span class="nt">&gt;</span><span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </main>
+
+        <aside class="c-grid__item u-col-3of12" id="l-styleGuide-sidebar">
+          <nav class="p-styleGuide__nav">
+            <h2 class="p-styleGuide__navTitle">TABLE OF CONTENTS</h2>
+            <ul>
+              <!-- component, project, utilityの順番にしたいのでソートする -->
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="component-button.html">component-button</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="component-central.html">component-central</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="component-equal.html">component-equal</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="component-grid.html">component-grid</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="project-alert.html">project-alert</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="project-badge.html">project-badge</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="project-pagination.html">project-pagination</a></li>
+              
+                <li class="p-styleGuide__navItem"><a class="p-styleGuide__navLink" href="utility-col.html">utility-col</a></li>
+              
+            </ul>
+          </nav>
+        </aside>
+      </div><!-- /.c-grid -->
+    </div><!-- /.c-wrapper -->
+
+    <footer id="l-styleGuide-footer">
+      Generate by <a href="https://trulia.github.io/hologram/">Hologram</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+// ==========================================================================
+// Utility | col
+// ==========================================================================
+
+/*doc
+---
+title: Col
+name:  Col
+category: utility-col
+---
+
+widthを指定するヘルパークラスです。  
+`u-col*of12`の`*`の合計が12になるようにします。  
+主に`c-grid`と組み合わせて使用することを想定しています。
+
+```html_example
+<div class="u-col-6of12">
+  <div class="p-example-box">50%</div>
+</div>
+```
+
+```html_example
+<div class="u-col-4of12">
+  <div class="p-example-box">25%</div>
+</div>
+```
+*/
+
+// $my-col-colsの値は12もしくは16
+$my-col-cols: 12 !default;
+
+// 1/5
+.u-col-fifth {
+  width: 20%;
+}
+
+// 1/8
+.u-col-eighth {
+  width: 12.5%;
+}
+
+@for $i from 1 through $my-col-cols {
+  .u-col-#{$i}of#{$my-col-cols} {
+    width: percentage($i / $my-col-cols);
+  }
+}
+
+@include my-media-query('m') {
+  // http://terkel.jp/archives/2013/03/css-selector-matches-prefixed-class/
+  [class^='u-col-'],
+  [class*=' u-col-'] {
+    width: 100%;
+  }
+}

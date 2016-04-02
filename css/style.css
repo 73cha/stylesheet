@@ -1,0 +1,973 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+.c-wrapper {
+  margin-right: auto;
+  margin-left: auto; }
+
+.c-wrapper--small {
+  max-width: 60rem; }
+
+.c-wrapper--medium {
+  max-width: 67.5rem; }
+
+.c-wrapper--large {
+  max-width: 80rem; }
+
+/*doc
+---
+title: Equal
+name: Equal
+category: component-equal
+---
+
+子要素の幅を均等にして横並びにするオブジェクトです。
+
+```html_example
+<div class="c-equal">
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-equal__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+*/
+.c-equal {
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed; }
+
+.c-equal__item {
+  display: table-cell; }
+
+/*doc
+---
+title: Grid
+name: Grid
+category: component-grid
+---
+
+シンプルなグリッドオブジェクトです。  
+`width`は`u-col-*of*`のヘルパーを使って指定します。  
+デフォルトではガターはありません。
+
+```html_example
+<div class="c-grid">
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+カラム間にガターがほしい場合は、`modifier`で設定します。  
+`small`以外には、`medium`と`large`を指定することができます。
+
+```html_example
+<div class="c-grid c-grid--gap-small">
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+ネストも出来ます。
+
+```html_example
+<div class="c-grid c-grid--gap-small">
+  <div class="c-grid__item u-col-6of12">
+    <div class="c-grid">
+      <div class="c-grid__item u-col-6of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-6of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-grid__item u-col-6of12">
+    <div class="c-grid">
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+
+      <div class="c-grid__item u-col-3of12">
+        <div class="p-example-box">hoge</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+位置を調整することもできます。
+
+```html_example
+<div class="c-grid">
+  <div class="c-grid__item u-col-6of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+右寄せ。
+
+```html_example
+<div class="c-grid c-grid--right">
+  <div class="c-grid__item u-col-6of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+水平方向中央。
+
+```html_example
+<div class="c-grid c-grid--center">
+  <div class="c-grid__item u-col-6of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+均等割り付け。
+
+```html_example
+<div class="c-grid c-grid--justify">
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+
+htmlの記述とは逆にすることが出来ます。  
+これは、サイドバー・メインの並びをブラウザ上では逆にしたい場合に使います。
+
+```html_example
+<div class="c-grid c-grid--rev c-grid--gap-large">
+  <div class="c-grid__item u-col-9of12">
+    <div class="p-example-box">メイン</div>
+  </div>
+
+  <div class="c-grid__item u-col-3of12">
+    <div class="p-example-box">サイドバー</div>
+  </div>
+</div>
+```
+*/
+.c-grid {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 0; }
+
+.c-grid__item {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1rem;
+  vertical-align: top; }
+
+.c-grid--gap-small {
+  margin-left: -0.5rem; }
+  .c-grid--gap-small > .c-grid__item {
+    padding-left: 0.5rem; }
+
+.c-grid--gap-medium {
+  margin-left: -1rem; }
+  .c-grid--gap-medium > .c-grid__item {
+    padding-left: 1rem; }
+
+.c-grid--gap-large {
+  margin-left: -4rem; }
+  .c-grid--gap-large > .c-grid__item {
+    padding-left: 4rem; }
+
+.c-grid--center {
+  text-align: center; }
+  .c-grid--center > .c-grid__item {
+    text-align: left; }
+
+.c-grid--right {
+  text-align: right; }
+  .c-grid--right > .c-grid__item {
+    text-align: left; }
+
+.c-grid--justify {
+  text-align: justify;
+  text-justify: distribute-all-lines; }
+  .c-grid--justify:after {
+    display: inline-block;
+    width: 100%;
+    content: ''; }
+  .c-grid--justify > .c-grid__item {
+    text-align: left; }
+
+.c-grid--rev {
+  text-align: left;
+  direction: rtl; }
+  .c-grid--rev > .c-grid__item {
+    text-align: left;
+    direction: ltr; }
+
+/*doc
+---
+title: Button
+name: Button
+category: component-button
+---
+
+ボタンオブジェクトです。  
+`div`、`a`、`button`、`submit`に使うことを想定しています。
+
+```html_example
+<div class="c-button c-button--yellow">[div] yellow</div>
+<a href="#" class="c-button c-button--yellow">[a] yellow</a>
+<button class="c-button c-button--yellow">[button] yellow</button>
+<submit class="c-button c-button--yellow">[submit] yellow</submit>
+```
+
+```html_example
+<div class="c-button c-button--red">[div] red</div>
+<a href="#" class="c-button c-button--red">[a] red</a>
+<button class="c-button c-button--red">[button] red</button>
+<submit class="c-button c-button--red">[submit] red</submit>
+```
+
+```html_example
+<div class="c-button c-button--green">[div] green</div>
+<a href="#" class="c-button c-button--green">[a] green</a>
+<button class="c-button c-button--green">[button] green</button>
+<submit class="c-button c-button--green">[submit] green</submit>
+```
+
+```html_example
+<div class="c-button c-button--disable">[div] disable</div>
+<a href="#" class="c-button c-button--disable">[a] disable</a>
+<button class="c-button c-button--disable">[button] disable</button>
+<submit class="c-button c-button--disable">[submit] disable</submit>
+```
+*/
+.c-button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-radius: 3px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: background-color ease-out 0.25s;
+  transition: background-color ease-out 0.25s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+.c-button--full {
+  width: 100%; }
+
+.c-button--green,
+.c-button--yellow,
+.c-button--red {
+  color: #fff; }
+
+.c-button--green {
+  border-color: #5cb85c;
+  background-color: #5cb85c; }
+  .c-button--green:hover {
+    background-color: #47a447; }
+
+.c-button--yellow {
+  border-color: #f0ad4e;
+  background-color: #f0ad4e; }
+  .c-button--yellow:hover {
+    background-color: #ed9c28; }
+
+.c-button--red {
+  border-color: #d9534f;
+  background-color: #d9534f; }
+  .c-button--red:hover {
+    background-color: #d2322d; }
+
+.c-button--disable {
+  border-color: #eee;
+  background-color: #f9f9f9;
+  color: #ccc;
+  cursor: default;
+  pointer-events: none; }
+
+/*doc
+---
+title: Central
+name: Central
+category: component-central
+---
+
+天地左右中央に配置したい場合に使います。  
+`c-central`に`height`を指定してください。  
+`style`属性かプロジェクトレイヤーから`height`を指定します。  
+高さを指定するための`modifire`はありません。
+
+```html_example
+<div class="c-central" style="height: 240px;">
+  <div class="c-central__item">
+    <div class="p-example-box">hoge</div>
+  </div>
+</div>
+```
+*/
+.c-central {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+  .c-central:after {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: ''; }
+
+.c-central__item {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle; }
+
+html {
+  font-size: 100%; }
+
+body {
+  color: #666;
+  font-family: 'Source Sans Pro'; }
+
+li {
+  list-style-type: none; }
+
+a {
+  color: #00b7ee;
+  text-decoration: none; }
+
+h1 {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: solid 1px #eee;
+  font-size: 3em;
+  line-height: 1; }
+
+pre,
+code {
+  font-family: 'Source Code Pro'; }
+
+code {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border: solid 1px #eee;
+  border-radius: 3px;
+  background-color: #f9f9f9; }
+
+#l-styleGuide-header {
+  margin-bottom: 5.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3em;
+  background-color: #00b7ee; }
+
+#l-styleGuide-main p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+#l-styleGuide-footer {
+  margin-top: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-top: solid 1px #eee;
+  text-align: center; }
+
+.p-styleGuide__name {
+  margin-right: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1;
+  vertical-align: middle; }
+
+.p-styleGuide__version {
+  background-color: #fff;
+  color: #00b7ee; }
+
+.p-styleGuide__nav {
+  border: solid 1px #eee;
+  border-radius: 3px;
+  text-align: center; }
+
+.p-styleGuide__navTitle {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: solid 1px #eee;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1; }
+
+.p-styleGuide__navItem {
+  position: relative; }
+
+.p-styleGuide__navItem + .p-styleGuide__navItem {
+  border-top: solid 1px #eee; }
+
+.p-styleGuide__navLink {
+  display: block;
+  padding: 1rem; }
+  .p-styleGuide__navLink:hover {
+    background-color: #fafcfd; }
+  .p-styleGuide__navLink:hover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    border-left: solid 3px #00b7ee;
+    content: ''; }
+
+.p-styleGuide__example {
+  border: solid 1px #eee;
+  border-radius: 3px; }
+
+.p-styleGuide__example + .p-styleGuide__example {
+  margin-top: 1.5rem; }
+
+.p-styleGuide__exampleOutput {
+  padding: 1.5rem; }
+
+.p-styleGuide__codeBlock {
+  padding: 1.5rem;
+  border-top: solid 1px #eee;
+  background-color: #fafcfd; }
+
+.p-example-box {
+  border: solid 1px #99d6e9;
+  background-color: #d3f1fa; }
+
+.Button [href$='component-button.html'],
+.Central [href$='component-central.html'],
+.Equal [href$='component-equal.html'],
+.Grid [href$='component-grid.html'],
+.Alert [href$='project-alert.html'],
+.Badge [href$='project-badge.html'],
+.Pagination [href$='project-pagination.html'],
+.Col [href$='utility-col.html'] {
+  background-color: #fafcfd; }
+  .Button [href$='component-button.html']:before,
+  .Central [href$='component-central.html']:before,
+  .Equal [href$='component-equal.html']:before,
+  .Grid [href$='component-grid.html']:before,
+  .Alert [href$='project-alert.html']:before,
+  .Badge [href$='project-badge.html']:before,
+  .Pagination [href$='project-pagination.html']:before,
+  .Col [href$='utility-col.html']:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: solid 3px #00b7ee;
+    content: ''; }
+
+/*doc
+---
+title: Alert
+name: Alert
+category: project-alert
+---
+
+注意喚起を促すオブジェクトです。bootstrapのアラートと同様のオブジェクトです。
+
+```html_example
+<div class="p-alert p-alert--success">success</div>
+```
+
+```html_example
+<div class="p-alert p-alert--warning">warnig</div>
+```
+
+```html_example
+<div class="p-alert p-alert--danger">danger</div>
+```
+
+角丸にしたい場合は、`modifire`を使います。
+
+```html_example
+<div class="p-alert p-alert--round p-alert--success">success round</div>
+```
+
+```html_example
+<div class="p-alert p-alert--round p-alert--warning">warnig round</div>
+```
+
+```html_example
+<div class="p-alert p-alert--round p-alert--danger">danger round</div>
+```
+*/
+.p-alert {
+  box-sizing: border-box;
+  padding: 1rem;
+  border-style: solid;
+  border-width: 1px; }
+
+.p-alert--round {
+  border-radius: 3px; }
+
+.p-alert--success {
+  border-color: #d6e9c6;
+  background-color: #dff0d8;
+  color: #3c763d; }
+
+.p-alert--warning {
+  border-color: #faebcc;
+  background-color: #fcf8e3;
+  color: #8a6d3b; }
+
+.p-alert--danger {
+  border-color: #ebccd1;
+  background-color: #f2dede;
+  color: #a94442; }
+
+/*doc
+---
+title: Badge
+name: Badge
+category: project-badge
+---
+
+badgeオブジェクトです。  
+`div`や`span`に使うことを想定しています。  
+記事の投稿数を示すような時やNEWアイコンなどに使います。  
+デフォルトでは、ガターの設定はありません。
+
+```html_example
+<div>hoge<span class="p-badge p-badge--green">10</span></div>
+```
+
+ガターを儲けたい場合、`modifire`を使います。
+
+```html_example
+<div>hoge<span class="p-badge p-badge--red p-badge--gap">NEW</span></div>
+```
+
+カラーバリエーションは、緑、黄色、グレー、赤です。
+
+```html_example
+<div class="p-badge p-badge--green">green</div>
+<div class="p-badge p-badge--yellow p-badge--gap">yellow</div>
+<div class="p-badge p-badge--gray p-badge--gap">gray</div>
+<div class="p-badge p-badge--red p-badge--gap">red</div>
+```
+*/
+.p-badge {
+  display: inline-block;
+  min-width: 1.618rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border-radius: 1rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.6 !important;
+  text-align: center;
+  vertical-align: middle; }
+
+.p-badge--green,
+.p-badge--yellow,
+.p-badge--red {
+  color: #fff; }
+
+.p-badge--gap {
+  margin-left: 0.5rem; }
+
+.p-badge--green {
+  background-color: #5cb85c; }
+
+.p-badge--yellow {
+  background-color: #f0ad4e; }
+
+.p-badge--red {
+  background-color: #d9534f; }
+
+.p-badge--gray {
+  background-color: #f9f9f9;
+  color: #ccc; }
+
+/*doc
+---
+title: Pagination
+name: Pagination
+category: project-pagination
+---
+
+ページネーションブジェクトです。  
+暫定的な見た目です。各プロジェクトごとに見た目は調整します。  
+
+```html_example
+<ol class="p-pagination">
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&laquo;</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">1</a>
+  </li>
+  
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">2</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">3</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&raquo;</a>
+  </li>
+</ol>
+```
+
+リンクのカレントは`modifire`を使います。
+
+```html_example
+<ol class="p-pagination">
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&laquo;</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link is-current">1</a>
+  </li>
+  
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">2</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">3</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&raquo;</a>
+  </li>
+</ol>
+```
+
+中央寄せにしたいときは、`modifire`を使います。
+
+```html_example
+<ol class="p-pagination p-pagination--center">
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&laquo;</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">1</a>
+  </li>
+  
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">2</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">3</a>
+  </li>
+
+  <li class="p-pagination__item">
+    <a href="#" class="p-pagination__link">&raquo;</a>
+  </li>
+</ol>
+```
+*/
+.p-pagination {
+  font-size: 0;
+  line-height: 1; }
+
+.p-pagination--center {
+  text-align: center; }
+
+.p-pagination__item {
+  display: inline-block;
+  list-style-type: none;
+  border: solid 1px #eee;
+  font-size: 1rem;
+  overflow: hidden; }
+  .p-pagination__item:first-child {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem; }
+  .p-pagination__item:last-child {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
+
+.p-pagination__item + .p-pagination__item {
+  border-left: none; }
+
+.p-pagination__link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none; }
+  .p-pagination__link:hover, .p-pagination__link.is-current {
+    background-color: #f9f9f9; }
+
+.u-mt-xs {
+  margin-top: 0.5rem !important; }
+
+.u-mb-xs {
+  margin-bottom: 0.5rem !important; }
+
+.u-mt-s {
+  margin-top: 1rem !important; }
+
+.u-mb-s {
+  margin-bottom: 1rem !important; }
+
+.u-mt-m {
+  margin-top: 2rem !important; }
+
+.u-mb-m {
+  margin-bottom: 2rem !important; }
+
+.u-mt-l {
+  margin-top: 4rem !important; }
+
+.u-mb-l {
+  margin-bottom: 4rem !important; }
+
+.u-va-t {
+  vertical-align: top !important; }
+
+.u-va-m {
+  vertical-align: middle !important; }
+
+.u-va-b {
+  vertical-align: bottom !important; }
+
+/*doc
+---
+title: Col
+name:  Col
+category: utility-col
+---
+
+widthを指定するヘルパークラスです。  
+`u-col*of12`の`*`の合計が12になるようにします。  
+主に`c-grid`と組み合わせて使用することを想定しています。
+
+```html_example
+<div class="u-col-6of12">
+  <div class="p-example-box">50%</div>
+</div>
+```
+
+```html_example
+<div class="u-col-4of12">
+  <div class="p-example-box">25%</div>
+</div>
+```
+*/
+.u-col-fifth {
+  width: 20%; }
+
+.u-col-eighth {
+  width: 12.5%; }
+
+.u-col-1of12 {
+  width: 8.33333%; }
+
+.u-col-2of12 {
+  width: 16.66667%; }
+
+.u-col-3of12 {
+  width: 25%; }
+
+.u-col-4of12 {
+  width: 33.33333%; }
+
+.u-col-5of12 {
+  width: 41.66667%; }
+
+.u-col-6of12 {
+  width: 50%; }
+
+.u-col-7of12 {
+  width: 58.33333%; }
+
+.u-col-8of12 {
+  width: 66.66667%; }
+
+.u-col-9of12 {
+  width: 75%; }
+
+.u-col-10of12 {
+  width: 83.33333%; }
+
+.u-col-11of12 {
+  width: 91.66667%; }
+
+.u-col-12of12 {
+  width: 100%; }
+
+@media screen and (max-width: 767px) {
+  [class^='u-col-'],
+  [class*=' u-col-'] {
+    width: 100%; } }
+.u-d-b {
+  display: block; }
+
+.u-d-ib {
+  display: inline-block; }
+
+.u-d-tb {
+  display: table; }
+
+.u-d-tc {
+  display: table-cell; }
+
+.u-d-fl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
