@@ -597,6 +597,7 @@ code {
 .Alert [href$='project-alert.html'],
 .Badge [href$='project-badge.html'],
 .Pagination [href$='project-pagination.html'],
+.Breadcrumbs [href$='project-breadcrumbs.html'],
 .Col [href$='utility-col.html'] {
   background-color: #fafcfd; }
   .Button [href$='component-button.html']:before,
@@ -606,6 +607,7 @@ code {
   .Alert [href$='project-alert.html']:before,
   .Badge [href$='project-badge.html']:before,
   .Pagination [href$='project-pagination.html']:before,
+  .Breadcrumbs [href$='project-breadcrumbs.html']:before,
   .Col [href$='utility-col.html']:before {
     position: absolute;
     top: 0;
@@ -852,6 +854,45 @@ category: project-pagination
   text-decoration: none; }
   .p-pagination__link:hover, .p-pagination__link.is-current {
     background-color: #f9f9f9; }
+
+/*doc
+---
+title: Breadcrumbs 
+name: Breadcrumbs 
+category: project-breadcrumbs
+---
+
+パンくずリストオブジェクトです。
+
+```html_example
+<ul class="p-breadCrumbs">
+  <li class="p-breadCrumbs__item">
+    <a class="p-breadCrumbs__link" href="#">hoge</a>
+  </li>
+
+  <li class="p-breadCrumbs__item">
+    <a class="p-breadCrumbs__link" href="#">fuga</a>
+  </li>
+
+  <li class="p-breadCrumbs__item">piyo</li>
+</ul>
+```
+*/
+.p-breadCrumbs {
+  list-style-type: none; }
+
+.p-breadCrumbs__item {
+  display: inline-block; }
+  .p-breadCrumbs__item:last-child {
+    font-weight: bold; }
+  .p-breadCrumbs__item:last-child:before {
+    font-weight: normal; }
+
+.p-breadCrumbs__item + .p-breadCrumbs__item:before {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  content: ">"; }
 
 .u-mt-xs {
   margin-top: 0.5rem !important; }

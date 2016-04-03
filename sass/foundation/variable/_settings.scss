@@ -7,9 +7,29 @@
 $my-wrapper-small: rem(960px);
 $my-wrapper-medium: rem(1080px);
 $my-wrapper-large: rem(1280px);
+
 $my-alert-padding: rem(16px);
+
 $my-button-padding: rem(16px);
+$my-button-color-green: my-color('core', 'green');
+$my-button-color-yellow: my-color('core', 'yellow');
+$my-button-color-red: my-color('core', 'red');
+$my-button-color-gray: my-color('core', 'gray');
+
 $my-pagination-padding-y: rem(8px);
 $my-pagination-padding-x: rem(16px);
 
+$my-badge-padding-x: rem(8px);
+$my-badge-font-size: rem(14px);
+$my-badge-color-green: my-color('core', 'green');
+$my-badge-color-yellow: my-color('core', 'yellow');
+$my-badge-color-red: my-color('core', 'red');
+$my-badge-color-gray: my-color('core', 'gray');
+
+$my-bread-crumbs-separetor: '\003E';
+
+$my-col-cols: 12;
+
+$my-grid-gap-small: rem(8px);
+$my-grid-gap-medium: rem(16px);
 $my-grid-gap-large: rem(64px);

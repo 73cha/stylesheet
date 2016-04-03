@@ -1,0 +1,54 @@
+// ==========================================================================
+// Project | bread-crumbs 
+// ==========================================================================
+
+/*doc
+---
+title: Breadcrumbs 
+name: Breadcrumbs 
+category: project-breadcrumbs
+---
+
+パンくずリストオブジェクトです。
+
+```html_example
+<ul class="p-breadCrumbs">
+  <li class="p-breadCrumbs__item">
+    <a class="p-breadCrumbs__link" href="#">hoge</a>
+  </li>
+
+  <li class="p-breadCrumbs__item">
+    <a class="p-breadCrumbs__link" href="#">fuga</a>
+  </li>
+
+  <li class="p-breadCrumbs__item">piyo</li>
+</ul>
+```
+*/
+
+$my-bread-crumbs-separetor: '\003E' !default;
+
+.p-breadCrumbs {
+  list-style-type: none;
+}
+
+.p-breadCrumbs__item {
+  display: inline-block;
+
+  &:last-child {
+    font-weight: bold;
+  }
+
+  &:last-child:before {
+    font-weight: normal;
+  }
+}
+
+.p-breadCrumbs__item + .p-breadCrumbs__item {
+  &:before {
+    margin-right: rem(8px);
+    margin-left: rem(8px);
+    vertical-align: middle;
+    content: $my-bread-crumbs-separetor;
+  }
+}

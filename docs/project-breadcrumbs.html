@@ -2,13 +2,13 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>a brand new styleguide: component-equal</title>
+    <title>a brand new styleguide: project-breadcrumbs</title>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet'>
     <link rel="stylesheet" href="./build/css/github.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
-  <body class="p-styleGuide Equal">
+  <body class="p-styleGuide Breadcrumbs">
     <header id="l-styleGuide-header">
       <div class="c-wrapper c-wrapper--large">
         <span class="p-styleGuide__name">STYLE GUIDE</span>
@@ -16,61 +16,41 @@
       </div>
     </header>
 
-    <!-- <pre>Equal</pre> -->
+    <!-- <pre>Breadcrumbs</pre> -->
 
     <div class="c-wrapper c-wrapper--large">
       <div class="c-grid c-grid--rev c-grid--gap-large">
         <main class="c-grid__item u-col-9of12" id="l-styleGuide-main">
-<h1 id="Equal" class="styleguide">Equal</h1>
-<p class="styleguide">子要素の幅を均等にして横並びにするオブジェクトです。</p><div class="p-styleGuide__example">
+<h1 id="Breadcrumbs" class="styleguide">Breadcrumbs</h1>
+<p class="styleguide">パンくずリストオブジェクトです。</p><div class="p-styleGuide__example">
   <div class="p-styleGuide__exampleOutput">
-    <div class="c-equal">
-  <div class="c-equal__item">
-    <div class="p-example-box">hoge</div>
-  </div>
+    <ul class="p-breadCrumbs">
+  <li class="p-breadCrumbs__item">
+    <a class="p-breadCrumbs__link" href="#">hoge</a>
+  </li>
 
-  <div class="c-equal__item">
-    <div class="p-example-box">hoge</div>
-  </div>
+  <li class="p-breadCrumbs__item">
+    <a class="p-breadCrumbs__link" href="#">fuga</a>
+  </li>
 
-  <div class="c-equal__item">
-    <div class="p-example-box">hoge</div>
-  </div>
-
-  <div class="c-equal__item">
-    <div class="p-example-box">hoge</div>
-  </div>
-
-  <div class="c-equal__item">
-    <div class="p-example-box">hoge</div>
-  </div>
-</div>
+  <li class="p-breadCrumbs__item">piyo</li>
+</ul>
 
   </div>
 
   <div class="p-styleGuide__codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-equal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-equal__item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"p-breadCrumbs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-breadCrumbs__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"p-breadCrumbs__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-equal__item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-breadCrumbs__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"p-breadCrumbs__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>fuga<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-equal__item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-equal__item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-equal__item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-example-box"</span><span class="nt">&gt;</span>hoge<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></pre>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"p-breadCrumbs__item"</span><span class="nt">&gt;</span>piyo<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
     </div>
   </div>
 </div>

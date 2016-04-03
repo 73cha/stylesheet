@@ -17,10 +17,10 @@ a {
 }
 
 h1 {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: rem(40px);
+  padding-bottom: rem(24px);
   border-bottom: solid 1px #eee;
-  font-size: 3em;
+  font-size: em(48px);
   line-height: 1;
 }
 
@@ -154,6 +154,7 @@ code {
 .Alert [href$='project-alert.html'],
 .Badge [href$='project-badge.html'],
 .Pagination [href$='project-pagination.html'],
+.Breadcrumbs [href$='project-breadcrumbs.html'],
 .Col [href$='utility-col.html'] {
   background-color: #fafcfd;
 
